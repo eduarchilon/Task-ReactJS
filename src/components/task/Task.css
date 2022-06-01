@@ -2,6 +2,7 @@
     border: 1px solid gray;
     border-radius: 10px;   
     padding: 20px;
+    width: 80%;
 }
 
 .task__flex-container {
