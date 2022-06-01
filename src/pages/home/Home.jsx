@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Task from '../../components/task/Task'
 import Labels from '../../components/labels/Labels'
 import './home.css'
 
 const Home = () => {
   return (
-    <Fragment>
+    <div className>
       <header className="header">
         <h1>All Tasks</h1>
         <input className="search-input" placeholder="Search"></input>
@@ -15,7 +15,7 @@ const Home = () => {
         <Labels />
         <Task />
       </main>
-    </Fragment>
+    </div>
   )
 }
 

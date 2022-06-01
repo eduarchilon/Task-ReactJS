@@ -3,12 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import AddTask from './pages/add-task/AddTask'
 import EditTask from './pages/edit-task/EditTask'
-import Header from './components/header/Header'
 
 export function App() {
   return (
     <Fragment>
-      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

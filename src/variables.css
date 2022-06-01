@@ -1,0 +1,44 @@
+/**
+ * ======================================== 
+ * Variables
+ * ========================================
+**/
+
+:root {
+  /*background*/
+  --bg-general: #ea5959;
+  --bg-main: #e5e5e5;
+  --bg-input: #f3f3f3;
+  --bg-yellow: #eac159;
+  --bg-blue: #6d59ea;
+
+  /*color*/
+  --text-li: #525252;
+  --li-active: #ea5959;
+  --placeholder: #b5b5b5;
+  --title: #0000;
+  --text-grey: #787878;
+  --icon-grey: #8e8e8e;
+
+  /*border*/
+  --border-red: 1px solid #ea5959;
+  --border-grey: 1px solid #d8d8d8;
+
+  /*shadow*/
+  --shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+
+  /*base font*/
+  /*
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    */
+  --base-font: 'Lato', sans-serif;
+
+  /*
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    */
+  --text-font: 'Roboto', sans-serif;
+}

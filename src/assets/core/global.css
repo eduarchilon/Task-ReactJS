@@ -4,8 +4,19 @@
  * ========================================
  */
 
-.container{
-    max-width: 1440px;
-	margin: auto;
-	padding: 0  8vw;
+.container {
+  background-color: var(--bg-main);
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: var(--bg-general);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
