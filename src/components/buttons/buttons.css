@@ -12,6 +12,8 @@
   padding: 5px;
   width: 15vw;
   color: white;
+  border: none;
+  padding: 10px;
 }
 
 .btnCancel {
@@ -19,4 +21,5 @@
   background-color: var(#f3f3f3);
   padding: 5px;
   width: 15vw;
+  border: none;
 }
