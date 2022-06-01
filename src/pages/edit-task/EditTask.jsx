@@ -1,19 +1,15 @@
 import React from 'react'
 import Buttons from '../../components/buttons/Buttons'
+import EditFormTask from '../../components/formEdit/EditFormTask'
 import './editTask.css'
 
 function EditTask() {
   return (
     <div className="container">
-      <h1>Edit Task</h1>
-      <form action="">
-        <label htmlFor="">Label</label>
-        <input type="text" />
-
-        <hr />
-        <label htmlFor="">Add a comment</label>
-        <hr />
-      </form>
+      <div className="container__titleTask">
+        <i class="fa-solid fa-arrow-left fa-2xl"></i>
+        <EditFormTask />
+      </div>
 
       <Buttons />
     </div>

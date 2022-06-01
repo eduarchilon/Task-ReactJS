@@ -1,1 +1,12 @@
+h1 {
+  margin-bottom: 10px;
+}
 
+.container__titleTask {
+  display: flex;
+}
+
+i {
+  color: var(--bg-general);
+  padding-top: 20px;
+}
