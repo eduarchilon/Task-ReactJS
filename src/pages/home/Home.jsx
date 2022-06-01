@@ -1,21 +1,14 @@
-import React, { Fragment } from 'react'
-import Task from '../../components/task/Task'
+import React from 'react'
 import Labels from '../../components/labels/Labels'
-import './home.css'
+import TaskSection from '../../components/taskSection/TaskSection'
+import '../home/home.css'
 
-const Home = () => {
+function Home() {
   return (
-    <Fragment>
-      <header className="header">
-        <h1>All Tasks</h1>
-        <input className="search-input" placeholder="Search"></input>
-      </header>
-
-      <main className="home__main-container">
-        <Labels />
-        <Task />
-      </main>
-    </Fragment>
+    <div className='home'>
+      <Labels />
+      <TaskSection />
+    </div>
   )
 }
 

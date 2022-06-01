@@ -4,8 +4,21 @@
  * ========================================
  */
 
+.app{
+	width: auto;
+	padding: 10vh 4vw 10vh ;
+}
+
 .container{
     max-width: 1440px;
 	margin: auto;
 	padding: 0  8vw;
+}
+
+a{
+	text-decoration: none;
+}
+
+.title{
+	font-family: var(--base-font);
 }

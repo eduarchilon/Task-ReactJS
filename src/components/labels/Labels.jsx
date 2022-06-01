@@ -1,13 +1,17 @@
 import React from 'react'
-import './Labels.css'
+import './labels.css'
 
-export default function labels() {
+function Labels() {
   return (
     <div className="label__container">
-      <label>All</label>
-      <label>Groceries</label>
-      <label>College</label>
-      <label>Payments</label>
+      <ul className='label__list'>
+        <li className='label-item'><a className='label-link' href='#'>All</a></li>
+        <li className='label-item'><a className='label-link' href="#">Groceries</a></li>
+        <li className='label-item'><a className='label-link' href="#">College</a></li>
+        <li className='label-item'><a className='label-link' href="#">Payments</a></li>
+      </ul>
     </div>
   )
 }
+
+export default Labels

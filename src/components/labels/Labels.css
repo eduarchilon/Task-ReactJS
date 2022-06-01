@@ -1,5 +1,28 @@
 .label__container {
+    border-right: var(--border-grey);
+    width: 210px;
     display: flex;
-    flex-direction: column;
-    width: 20%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 170px;
+}
+
+.label__list{
+    list-style: none;
+    
+}
+
+.label-item{
+    font-family: var(--text-font);
+    font-weight: 400;
+    margin: 20px;
+    color: var(--text-grey);
+}
+
+.label-link{
+    color: var(--text-grey);
+}
+
+.label-link:hover{
+    color: var(--li-active);
 }

@@ -1,0 +1,58 @@
+.taskitem__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-buton__container{
+    margin-left: 140px;
+}
+
+.checkbox-style{
+    width: 30px;
+    height: 30px;
+    border: var(--border-red);
+    display: block;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.task-title, .task-date{
+    font-family: var(--text-font);
+}
+
+.task-date{
+    margin-top: 10px;
+    font-weight: 100;
+    color: var(--text-grey);
+}
+
+.task-title{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.taskitem__content{
+    display: flex;
+    border: var(--border-grey);
+    padding: 10px 10px;
+    border-radius: 8px;
+}
+.btn-label{
+    margin-left: 20px;
+    height: 25px;
+    line-height: 10px;
+    font-family: var(--base-font);
+    padding: 5px 0;
+    border: none;
+    background-color: var(--bg-general);
+    width: 115px;
+    border-radius: 5px;
+    color: var(--text-white);
+}
+
+.task-buton__container{
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
