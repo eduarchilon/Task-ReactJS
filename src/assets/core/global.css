@@ -3,27 +3,6 @@
  * Global
  * ========================================
  */
-
-<<<<<<< HEAD
-.app{
-	width: auto;
-	padding: 10vh 4vw 10vh ;
-}
-
-.container{
-    max-width: 1440px;
-	margin: auto;
-	padding: 0  8vw;
-}
-
-a{
-	text-decoration: none;
-}
-
-.title{
-	font-family: var(--base-font);
-}
-=======
 .container {
   background-color: var(--bg-main);
   position: absolute;
@@ -45,4 +24,3 @@ body {
   justify-content: center;
   align-items: center;
 }
->>>>>>> 883a4a7f4812d4489cc43935fd02299c5aa25c93
