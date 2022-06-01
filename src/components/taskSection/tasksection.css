@@ -1,9 +1,11 @@
-/* .task__container{
-    padding: 30px 40px 30px 50px;
+.task__section{
+    padding: 0 20px 0 20px;
     position: relative;
+    width: 100%;
 }
+
 .input-search{
-    width: 680px;
+    width: 100%;
     margin: 25px 0;
     height: 45px;
     border-radius: 5px;
@@ -15,7 +17,7 @@
 }
 
 .btn-plus{
-    margin: 0 40px 30px 0;
+    margin: 0 20px 0 0;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -29,4 +31,4 @@
     border-radius: 100%;
     color: white;
     background-color: var(--bg-general);
-} */
+}

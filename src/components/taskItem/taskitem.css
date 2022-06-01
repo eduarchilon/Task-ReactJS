@@ -1,10 +1,5 @@
-/* .taskitem__container{
+.taskitem__container{
     display: flex;
-    justify-content: space-between;
-}
-
-.task-buton__container{
-    margin-left: 140px;
 }
 
 .checkbox-style{
@@ -17,6 +12,16 @@
     margin-right: 0;
 }
 
+.taskitem__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: var(--border-grey);
+    padding: 10px 10px;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
 .task-title, .task-date{
     font-family: var(--text-font);
 }
@@ -27,17 +32,11 @@
     color: var(--text-grey);
 }
 
-.task-title{
+/*.task-title{
     font-weight: 400;
     font-size: 20px;
 }
 
-.taskitem__content{
-    display: flex;
-    border: var(--border-grey);
-    padding: 10px 10px;
-    border-radius: 8px;
-}
 .btn-label{
     margin-left: 20px;
     height: 25px;
