@@ -1,0 +1,10 @@
+.container__formTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 20px;
+}
+
+label {
+  padding: 20px;
+}

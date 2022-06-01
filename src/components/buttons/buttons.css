@@ -1,0 +1,25 @@
+.container__buttons {
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+}
+
+.btnSave {
+  border-radius: 100px;
+  background-color: var(--bg-general);
+  padding: 5px;
+  width: 10vw;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.btnCancel {
+  border-radius: 100px;
+  background-color: var(#f3f3f3);
+  padding: 5px;
+  width: 10vw;
+  border: none;
+}
