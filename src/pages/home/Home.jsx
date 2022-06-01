@@ -5,11 +5,9 @@ import './home.css'
 
 const Home = () => {
   return (
-    <div className>
-      <header className="header">
-        <h1>All Tasks</h1>
-        <input className="search-input" placeholder="Search"></input>
-      </header>
+    <div className="container">
+      <h1>All Tasks</h1>
+      <input className="search-input" placeholder="Search"></input>
 
       <main className="home__main-container">
         <Labels />
