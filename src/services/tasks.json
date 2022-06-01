@@ -1,30 +1,35 @@
 {
   "results": [
     {
+      "id": 1,
       "title": "Study for test",
       "message": "Study maths for school test",
       "due_date": "16/06/2022",
       "labels": ["School"]
     },
     {
+      "id": 2,
       "title": "Clean my room",
       "message": "The clothes are on the couch, the bed is unmade and the floor is dirty",
       "due_date": "5/06/2022",
       "labels": ["Home"]
     },
     {
+      "id": 3,
       "title": "Cook food to freeze",
       "message": "Cook lunch for all week",
       "due_date": "3/06/2022",
       "labels": ["Home"]
     },
     {
+      "id": 4,
       "title": "Monthly purchase in the supermarket",
       "message": "Buy: chicken, noodles, vegetables, meat, tuna, mayonesse, coke, toilet paper.",
       "due_date": "8/06/2022",
       "labels": ["Home", "Shop"]
     },
     {
+      "id": 5,
       "title": "Call Patrick",
       "message": "Organize weekend trip",
       "due_date": "3/06/2022",
