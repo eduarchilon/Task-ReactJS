@@ -1,15 +1,16 @@
 .container__buttons {
-  display: flex;
-  justify-content: flex-end;
   padding: 10px;
   bottom: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
 }
 
 .btnSave {
   border-radius: 100px;
   background-color: var(--bg-general);
   padding: 5px;
-  width: 25%;
+  width: 15vw;
   color: white;
 }
 
@@ -17,5 +18,5 @@
   border-radius: 100px;
   background-color: var(#f3f3f3);
   padding: 5px;
-  width: 25%;
+  width: 15vw;
 }
