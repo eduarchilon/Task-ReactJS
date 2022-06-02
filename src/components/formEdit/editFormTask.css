@@ -3,8 +3,25 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 20px;
+  width: 100%;
 }
 
 label {
   padding: 20px;
+}
+
+hr {
+  width: 100%;
+}
+
+.edit-task__input {
+  width: 75%;
+  height: 25px;
+  padding: 5px;
+  float: right;
+  border: none;
+  background-color: inherit;
+  font-family: var(--base-font);
+  font-size: 18px;
+  line-height: 22px;
 }
