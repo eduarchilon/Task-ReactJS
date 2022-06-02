@@ -25,3 +25,15 @@ hr {
   font-size: 18px;
   line-height: 22px;
 }
+
+.edit-task__title-input {
+  width: 100%;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 37px;
+  border: none;
+  background-color: inherit;
+  padding: 0 20px;
+}

@@ -4,7 +4,11 @@ import './editFormTask.css'
 const EditFormTask = () => {
   return (
     <div className="container__formTask ">
-      <h1>Edit Task</h1>
+      <input
+        type="text"
+        defaultValue="Cooking a salmon sushi"
+        className="edit-task__title-input"
+      />
       <label htmlFor="">
         Label{' '}
         <input
