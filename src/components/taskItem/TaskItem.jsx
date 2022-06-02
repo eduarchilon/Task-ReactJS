@@ -1,7 +1,8 @@
 import React from 'react'
 import './taskitem.css'
 
-function TaskItem() {
+function TaskItem(props) {
+  const { title, due_date, labels } = props
   return (
     <div className="taskitem__container">
       <input
@@ -12,18 +13,16 @@ function TaskItem() {
       />
       <div className="taskitem__content">
         <div className="tast-text__container">
-          <h4 className="task-title">Cooking a salmon sushi</h4>
-          <p className="task-date">Due date: 12/05/2022</p>
+          <h4 className="task-title">{title}</h4>
+          <p className="task-date">Due date: {due_date}</p>
         </div>
-        <button type="button" className="btn-label">
-          Groceries
-        </button>
+        <span className="btn-label">{labels}</span>
         <div className="task-buton__container">
-          <button>
-            <i className="fas fa-edit fa-edit"></i>
+          <button className="edit-btn">
+            <i className="fas fa-edit fa-edit fa-xl"></i>
           </button>
-          <button>
-            <i className="fas fa-trash-alt fa-delete"></i>
+          <button className="edit-btn">
+            <i className="fas fa-trash-alt fa-delete fa-xl"></i>
           </button>
         </div>
       </div>
