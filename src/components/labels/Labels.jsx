@@ -1,5 +1,5 @@
 import React from 'react'
-import './Labels.css'
+import './labels.css'
 
 function Labels() {
   return (
