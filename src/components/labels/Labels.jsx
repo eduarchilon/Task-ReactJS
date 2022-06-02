@@ -1,32 +1,14 @@
 import React from 'react'
 import './Labels.css'
 
-function Labels() {
+function Labels(props) {
+  const { category } = props
   return (
-    <div className="label__container">
-      <ul className="label__list">
-        <li className="label-item">
-          <a className="label-link" href="#">
-            All
-          </a>
-        </li>
-        <li className="label-item">
-          <a className="label-link" href="#">
-            Groceries
-          </a>
-        </li>
-        <li className="label-item">
-          <a className="label-link" href="#">
-            College
-          </a>
-        </li>
-        <li className="label-item">
-          <a className="label-link" href="#">
-            Payments
-          </a>
-        </li>
-      </ul>
-    </div>
+    <li className="label-item">
+      <a href="#" className="label-link">
+        {category}
+      </a>
+    </li>
   )
 }
 
