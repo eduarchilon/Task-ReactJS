@@ -8,9 +8,10 @@
 
 .label__container {
   border-right: var(--border-grey);
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-bottom: 170px;
+  width: 25%;
 }

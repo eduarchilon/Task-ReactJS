@@ -1,4 +1,5 @@
 .alltask__container {
   height: 200px;
   overflow: auto;
+  padding-right: 1px;
 }
