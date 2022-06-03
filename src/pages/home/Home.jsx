@@ -6,7 +6,6 @@ import { getAllLabels } from '../../services/services'
 
 function Home() {
   const Categories = getAllLabels()
-  console.log(Categories)
 
   return (
     <div className="container home">
