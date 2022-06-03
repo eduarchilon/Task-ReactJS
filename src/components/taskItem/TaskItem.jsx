@@ -15,13 +15,13 @@ function TaskItem(props) {
 
       <div className="taskitem__content">
         <div className="task-text__container">
-          <div>
+          <div className="task-titlelabel__container">
             <h4 className="task-title">{title}</h4>
-            <p className="task-date">Due date: {due_date}</p>
+            <div>
+              <span className="btn-label">{labels}</span>
+            </div>
           </div>
-          <div>
-            <span className="btn-label">{labels}</span>
-          </div>
+          <p className="task-date">Due date: {due_date}</p>
         </div>
 
         <div className="task-buton__container">

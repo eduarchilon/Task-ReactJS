@@ -22,7 +22,7 @@
 .taskitem__content {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: var(--border-grey);
   padding: 10px 10px;
   border-radius: 8px;
@@ -34,10 +34,6 @@
 .task-title,
 .task-date {
   font-family: var(--text-font);
-}
-
-.task-title {
-  max-width: 150px;
 }
 
 .task-date {
@@ -64,15 +60,23 @@
   text-align: center;
   align-self: flex-start;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .task-text__container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: space-between;
+  width: 100%;
 }
 
 .task-buton__container {
   display: flex;
   gap: 15px;
+  padding-bottom: 10px;
+}
+
+.task-titlelabel__container {
+  display: flex;
+  
 }
