@@ -6,13 +6,17 @@ import { Link } from 'react-router-dom'
 export default function TaskSection() {
   return (
     <div className="task__section">
-      <h1 className="title">All Task</h1>
-      <input type="search" placeholder="Buscar" className="input-search" />
-      <TaskContainer />
+      <div>
+        <h1 className="title">All Task</h1>
+        <input type="search" placeholder="Buscar" className="input-search" />
+      </div>
+      <div>
+        <TaskContainer />
+      </div>
 
       <Link to="/EditTask">
-        <button type="button" className="btn btn-plus">
-          +
+        <button type="button" className="btn-plus">
+          <span>+</span>
         </button>
       </Link>
     </div>

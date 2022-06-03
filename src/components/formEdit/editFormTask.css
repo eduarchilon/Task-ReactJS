@@ -7,7 +7,7 @@
 }
 
 label {
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 hr {
@@ -15,15 +15,28 @@ hr {
 }
 
 .edit-task__input {
-  width: 75%;
   height: 25px;
-  padding: 5px;
-  float: right;
+  padding-left: 20px;
   border: none;
   background-color: inherit;
   font-family: var(--base-font);
   font-size: 18px;
   line-height: 22px;
+}
+
+.edit-task__label {
+  line-height: 10px;
+  font-family: var(--base-font);
+  padding: 5px 0;
+  border: none;
+  background-color: var(--bg-general);
+  width: 115px;
+  border-radius: 5px;
+  color: var(--text-white);
+  text-align: center;
+  align-self: flex-start;
+  display: inline-block;
+  margin-left: 50px;
 }
 
 .edit-task__title-input {

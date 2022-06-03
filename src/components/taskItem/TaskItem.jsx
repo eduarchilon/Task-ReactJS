@@ -12,16 +12,24 @@ function TaskItem(props) {
         className="checkbox-style"
       />
       <div className="taskitem__content">
-        <div className="tast-text__container">
-          <h4 className="task-title">{title}</h4>
-          <p className="task-date">Due date: {due_date}</p>
+        <div className="task-text__container">
+          <div>
+            <h4 className="task-title">{title}</h4>
+            <p className="task-date">Due date: {due_date}</p>
+          </div>
+          <div>
+            <span className="btn-label">{labels}</span>
+          </div>
         </div>
-        <span className="btn-label">{labels}</span>
+
         <div className="task-buton__container">
           <button className="edit-btn">
-            <i className="fas fa-edit fa-edit fa-xl"></i>
+            <i
+              className="fas fa-edit fa-edit fa-xl"
+              style={{ color: '#8E8E8E' }}
+            ></i>
           </button>
-          <button className="edit-btn">
+          <button className="delete-btn">
             <i className="fas fa-trash-alt fa-delete fa-xl"></i>
           </button>
         </div>

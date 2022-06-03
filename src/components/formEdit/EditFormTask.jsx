@@ -14,7 +14,7 @@ const EditFormTask = () => {
         <input
           type="text"
           defaultValue="Groceries"
-          className="edit-task__input"
+          className="edit-task__label"
         />
       </label>
 

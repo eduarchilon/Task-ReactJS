@@ -1,46 +1,50 @@
-.taskitem__container{
-    display: flex;
-    margin-bottom: 15px;   
+.taskitem__container {
+  display: flex;
+  margin-bottom: 15px;
 }
 
-.checkbox-style{
-    width: 30px;
-    height: 30px;
-    border: var(--border-red);
-    display: block;
-    margin: auto;
-    margin-left: 0;
-    margin-right: 0;
+.checkbox-style {
+  width: 30px;
+  height: 30px;
+  border: var(--border-red);
+  display: block;
+  margin: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.edit-btn{
-    border: none;
+.edit-btn {
+  border: none;
 }
 
-.taskitem__content{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border: var(--border-grey);
-    padding: 10px 10px;
-    border-radius: 8px;
-    margin-left: 15px;
-    background-color: var(--bg-input); 
-    align-items: center;
+.delete-btn {
+  border: none;
+}
+.taskitem__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: var(--border-grey);
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-left: 15px;
+  background-color: var(--bg-input);
+  align-items: center;
 }
 
-.task-title, .task-date{
-    font-family: var(--text-font);
+.task-title,
+.task-date {
+  font-family: var(--text-font);
 }
 
 .task-title {
-    max-width: 150px
+  max-width: 150px;
 }
 
-.task-date{
-    margin-top: 10px;
-    font-weight: 100;
-    color: var(--text-grey);
+.task-date {
+  margin-top: 10px;
+  font-weight: 100;
+  color: var(--text-grey);
 }
 
 /*.task-title{
@@ -48,23 +52,28 @@
     font-size: 20px;
 }
 */
-.btn-label{
-    margin-left: 20px;
-    height: 25px;
-    line-height: 10px;
-    font-family: var(--base-font);
-    padding: 5px 0;
-    border: none;
-    background-color: var(--bg-general);
-    width: 115px;
-    border-radius: 5px;
-    color: var(--text-white);
-    text-align: center;
-    align-self: flex-start;
+.btn-label {
+  height: 25px;
+  line-height: 10px;
+  font-family: var(--base-font);
+  padding: 5px 0;
+  border: none;
+  background-color: var(--bg-general);
+  width: 115px;
+  border-radius: 5px;
+  color: var(--text-white);
+  text-align: center;
+  align-self: flex-start;
+  display: inline-block;
+  margin-left: 10px;
 }
-/*
-.task-buton__container{
-    align-items: center;
-    display: flex;
-    gap: 15px;
-} */
+
+.task-text__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.task-buton__container {
+  display: flex;
+  gap: 15px;
+}
