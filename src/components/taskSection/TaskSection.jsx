@@ -10,9 +10,8 @@ export default function TaskSection() {
         <h1 className="title">All Task</h1>
         <input type="search" placeholder="Search" className="input-search" />
       </div>
-      <div>
-        <TaskContainer />
-      </div>
+
+      <TaskContainer />
 
       <Link to="/AddTask">
         <button type="button" className="btn-plus">

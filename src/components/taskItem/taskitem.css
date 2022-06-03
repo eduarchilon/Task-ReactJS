@@ -85,3 +85,10 @@
 .fas {
   padding: 0;
 }
+
+@media (max-width: 767px) {
+  .task-titlelabel__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

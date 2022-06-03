@@ -1,5 +1,11 @@
 .alltask__container {
-  height: 200px;
+  height: 55%;
   overflow: auto;
   padding-right: 1px;
+}
+
+@media (max-width: 991px) {
+  .alltask__container {
+    height: 70%;
+  }
 }

@@ -15,3 +15,24 @@
   padding-bottom: 170px;
   width: 25%;
 }
+
+@media (max-width: 991px) {
+  .label__container {
+    display: none;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+  }
+}
