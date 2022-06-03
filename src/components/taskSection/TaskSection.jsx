@@ -8,13 +8,13 @@ export default function TaskSection() {
     <div className="task__section">
       <div>
         <h1 className="title">All Task</h1>
-        <input type="search" placeholder="Buscar" className="input-search" />
+        <input type="search" placeholder="Search" className="input-search" />
       </div>
       <div>
         <TaskContainer />
       </div>
 
-      <Link to="/EditTask">
+      <Link to="/AddTask">
         <button type="button" className="btn-plus">
           <span>+</span>
         </button>

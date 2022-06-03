@@ -6,7 +6,6 @@
 .checkbox-style {
   width: 30px;
   height: 30px;
-  border: var(--border-red);
   display: block;
   margin: auto;
   margin-left: 0;
