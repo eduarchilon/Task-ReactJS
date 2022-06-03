@@ -14,11 +14,14 @@
 
 .edit-btn {
   border: none;
+  background-color: inherit;
 }
 
 .delete-btn {
   border: none;
+  background-color: inherit;
 }
+
 .taskitem__content {
   width: 100%;
   display: flex;
@@ -73,10 +76,12 @@
 .task-buton__container {
   display: flex;
   gap: 15px;
-  padding-bottom: 10px;
 }
 
 .task-titlelabel__container {
   display: flex;
-  
+}
+
+.fas {
+  padding: 0;
 }

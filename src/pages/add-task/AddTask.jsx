@@ -1,6 +1,6 @@
 import React from 'react'
 import Buttons from '../../components/buttons/Buttons'
-import EditFormTask from '../../components/formEdit/EditFormTask'
+import FormCreateTask from '../../components/formCreateTask/formCreateTask'
 import { Link } from 'react-router-dom'
 
 function AddTask() {
@@ -10,7 +10,7 @@ function AddTask() {
         <Link to="/">
           <i className="fa-solid fa-arrow-left fa-2xl"></i>{' '}
         </Link>
-        <EditFormTask />
+        <FormCreateTask />
       </div>
 
       <Buttons />
