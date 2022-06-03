@@ -45,11 +45,6 @@
   color: var(--text-grey);
 }
 
-/*.task-title{
-    font-weight: 400;
-    font-size: 20px;
-}
-*/
 .btn-label {
   height: 25px;
   line-height: 10px;
@@ -91,4 +86,10 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  .btn-label {
+    margin-left: 0;
+  }
 }
+
+
