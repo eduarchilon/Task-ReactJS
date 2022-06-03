@@ -16,18 +16,9 @@
   width: 25%;
 }
 
-@media (max-width: 991px) {
-  .label__container {
-    display: none;
-  }
-
-  .container {
-    padding: 10px;
-  }
-}
-
 @media (max-width: 767px) {
   body {
+    margin: 0;
     padding: 0;
   }
   .container {
