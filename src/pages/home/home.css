@@ -17,6 +17,10 @@
 
 .border-home{
   border-right: var(--border-grey);
+} 
+
+.title__hr--mobile {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -27,7 +31,7 @@
   .container {
     width: 100vw;
     height: 93vh;
-    padding: 0;
+    padding: 15px;
   }
 
   .label__container {
@@ -36,6 +40,13 @@
 
   .border-home {
     display: none;
+  }
+
+  .title__hr--mobile {
+    display: block;
+    width: 100%;
+    border-top: 0;
+    border-color: var(--border-gray);
   }
 }
 

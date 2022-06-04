@@ -32,6 +32,10 @@
 
 @media (max-width: 767px) {
   .task__section {
-    padding: 15px;
+    padding: 0;
+  }
+
+  .title {
+    padding-left: 20px;
   }
 }
