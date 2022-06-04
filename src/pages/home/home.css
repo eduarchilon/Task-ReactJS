@@ -1,5 +1,6 @@
 .home {
   display: flex;
+  padding: 0;
 }
 
 .label__list {
@@ -7,13 +8,15 @@
 }
 
 .label__container {
-  border-right: var(--border-grey);
-  padding: 20px 0;
+  padding: 120px 0px 0px 3%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding-bottom: 170px;
   width: 25%;
+  max-height: 350px ;
+}
+
+.border-home{
+  border-right: var(--border-grey);
 }
 
 @media (max-width: 991px) {

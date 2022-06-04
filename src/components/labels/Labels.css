@@ -1,13 +1,15 @@
 .label-item {
   font-family: var(--text-font);
   font-weight: 400;
-  margin: 20px;
+  margin: 25px;
   color: var(--text-grey);
 }
 
 .label-link {
   color: var(--text-grey);
   text-decoration: none;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .label-link:hover {

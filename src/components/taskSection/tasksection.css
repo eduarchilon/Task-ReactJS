@@ -1,5 +1,5 @@
 .task__section {
-  padding: 0 40px;
+  padding: 20px 40px;
   position: relative;
   width: 100%;
 }
@@ -11,26 +11,20 @@
   border-radius: 5px;
   border: none;
   padding: 0 30px;
-  font-size: 18px;
   background-color: var(--bg-input);
-  font-family: var(--text-font);
 }
 
 .btn-plus {
   margin: 0 25px 0 0;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 13px;
   cursor: pointer;
   border: none;
   font-size: 30px;
-  padding-bottom: 5px;
   text-align: center;
-  width: 45px;
-  height: 45px;
   border-radius: 100%;
   color: white;
-  background-color: var(--bg-general);
   display: flex;
   justify-content: center;
   align-items: flex-end;
