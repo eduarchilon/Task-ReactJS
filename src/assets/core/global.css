@@ -37,3 +37,18 @@ input{
   font-size: 18px;
   font-family: var(--text-font);
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 80vw;
+  }
+  body{
+    padding: 5vh 10%;
+  }
+}
+
+@media (max-width: 767px){
+  body {
+    background-color: var(--bg-main);
+  }
+}

@@ -4,3 +4,9 @@
   padding-right: 1px;
   scrollbar-width: thin;
 }
+
+@media (max-width: 767px){
+  .alltask__container {
+    height: 60%;
+  }
+}
