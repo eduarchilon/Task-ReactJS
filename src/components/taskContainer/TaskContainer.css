@@ -2,4 +2,5 @@
   height: 55%;
   overflow: auto;
   padding-right: 1px;
+  scrollbar-width: thin;
 }
