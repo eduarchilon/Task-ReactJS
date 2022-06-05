@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './editFormTask.css'
 import { getAllLabels } from '../../services/services'
 import OptionLabel from '../optionLabel/OptionLabel'
@@ -8,11 +9,16 @@ const EditFormTask = () => {
 
   return (
     <div className="container__formTask ">
-      <input
-        type="text"
-        defaultValue="Study for test"
-        className="edit-task__title-input"
-      />
+      <div className="edit__title-container">
+        <Link to="/">
+          <i className="fa-solid fa-arrow-left fa-2xl"></i>{' '}
+        </Link>
+        <input
+          type="text"
+          defaultValue="Study for test"
+          className="edit-task__title-input"
+        />
+      </div>
 
       <div>
         <label htmlFor="labelSelect" className="edit__instruction">
