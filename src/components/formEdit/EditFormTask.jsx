@@ -13,10 +13,6 @@ const EditFormTask = () => {
         defaultValue="Study for test"
         className="edit-task__title-input"
       />
-      {/* <label htmlFor="">
-        Label{' '}
-        <input type="text" defaultValue="School" className="edit-task__label" />
-      </label> */}
 
       <div>
         <label htmlFor="labelSelect" className="edit__instruction">
