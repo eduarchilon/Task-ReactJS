@@ -51,4 +51,8 @@ input{
   body {
     background-color: var(--bg-main);
   }
+
+  .container {
+    box-shadow: none;
+  }
 }
