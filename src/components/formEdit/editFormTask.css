@@ -14,15 +14,27 @@ hr {
   width: 100%;
 }
 
+.edit__label-select {
+  width: 75%;
+  float: right;
+}
+
 .edit-task__input {
   height: 25px;
-  padding-left: 20px;
   border: none;
   background-color: inherit;
   font-family: var(--base-font);
   font-size: 18px;
   line-height: 22px;
+  width: 75%;
+  float: right;
+  color: var(--placeholder);
 }
+
+.edit__instruction {
+  color: var(--text-grey);
+}
+
 
 .edit-task__label {
   line-height: 10px;
@@ -49,6 +61,7 @@ hr {
   border: none;
   background-color: inherit;
   padding: 0 20px;
+  margin-bottom: 30px;
 }
 
 

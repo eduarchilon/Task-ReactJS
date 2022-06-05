@@ -19,18 +19,22 @@ const EditFormTask = () => {
       </label> */}
 
       <div>
-        <label htmlFor="labelSelect">
+        <label htmlFor="labelSelect" className="edit__instruction">
           {' '}
           Label
-          <select name="label-select" id="labelSelect">
-            {Categories.map((category, index) => {
-              return <OptionLabel key={index} value={category} />
-            })}
-          </select>
         </label>
+        <select
+          name="label-select"
+          id="labelSelect"
+          className="edit__label-select"
+        >
+          {Categories.map((category, index) => {
+            return <OptionLabel key={index} value={category} />
+          })}
+        </select>
       </div>
 
-      <label htmlFor="">
+      <label htmlFor="" className="edit__instruction">
         Due Date{' '}
         <input
           type="text"
@@ -39,7 +43,7 @@ const EditFormTask = () => {
         />
       </label>
       <hr />
-      <label htmlFor="">
+      <label htmlFor="" className="edit__instruction">
         Add a comment <input type="text" className="edit-task__input" />
       </label>
       <hr />

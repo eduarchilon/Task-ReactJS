@@ -13,7 +13,6 @@ function EditTask() {
         </Link>
         <EditFormTask />
       </div>
-
       <Buttons />
     </div>
   )
