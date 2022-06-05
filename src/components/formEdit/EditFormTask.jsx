@@ -19,15 +19,17 @@ const EditFormTask = () => {
           {' '}
           Label
         </label>
-        <select
-          name="label-select"
-          id="labelSelect"
-          className="edit__label-select"
-        >
-          {Categories.map((category, index) => {
-            return <OptionLabel key={index} value={category} />
-          })}
-        </select>
+        <div className="select__container ">
+          <select
+            name="label-select"
+            id="labelSelect"
+            className="edit__label-select"
+          >
+            {Categories.map((category, index) => {
+              return <OptionLabel key={index} value={category} />
+            })}
+          </select>
+        </div>
       </div>
 
       <label htmlFor="" className="edit__instruction">

@@ -1,0 +1,15 @@
+.option-label__item {
+    height: 25px;
+    line-height: 13px;
+    font-family: var(--base-font);
+    padding: 5px 0;
+    border: none;
+    background-color: var(--bg-general);
+    width: 115px;
+    border-radius: 5px;
+    color: var(--text-white);
+    text-align: center;
+    align-self: flex-start;
+    display: inline-block;
+    font-size: 12px;
+}
