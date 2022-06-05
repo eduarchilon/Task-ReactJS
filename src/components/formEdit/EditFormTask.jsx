@@ -1,7 +1,11 @@
 import React from 'react'
 import './editFormTask.css'
+import { getAllLabels } from '../../services/services'
+import OptionLabel from '../optionLabel/OptionLabel'
 
 const EditFormTask = () => {
+  const Categories = getAllLabels()
+
   return (
     <div className="container__formTask ">
       <input
@@ -9,10 +13,22 @@ const EditFormTask = () => {
         defaultValue="Study for test"
         className="edit-task__title-input"
       />
-      <label htmlFor="">
+      {/* <label htmlFor="">
         Label{' '}
         <input type="text" defaultValue="School" className="edit-task__label" />
-      </label>
+      </label> */}
+
+      <div>
+        <label htmlFor="labelSelect">
+          {' '}
+          Label
+          <select name="label-select" id="labelSelect">
+            {Categories.map((category, index) => {
+              return <OptionLabel key={index} value={category} />
+            })}
+          </select>
+        </label>
+      </div>
 
       <label htmlFor="">
         Due Date{' '}
