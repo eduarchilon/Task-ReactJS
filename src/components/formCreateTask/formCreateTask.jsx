@@ -1,4 +1,5 @@
 import React from 'react'
+import DateSetter from '../dateSetter/DateSetter'
 
 const FormCreateTask = () => {
   return (
@@ -14,8 +15,7 @@ const FormCreateTask = () => {
       </label>
 
       <label htmlFor="">
-        Due Date{' '}
-        <input type="text" defaultValue="Empty" className="edit-task__input" />
+        Due Date <DateSetter />
       </label>
       <hr />
       <label htmlFor="">

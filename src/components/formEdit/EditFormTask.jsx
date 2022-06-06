@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './editFormTask.css'
 import { getAllLabels } from '../../services/services'
 import OptionLabel from '../optionLabel/OptionLabel'
+import DateSetter from '../dateSetter/DateSetter'
 
 const EditFormTask = () => {
   const Categories = getAllLabels()
@@ -39,12 +40,8 @@ const EditFormTask = () => {
       </div>
 
       <label htmlFor="" className="edit__instruction">
-        Due Date{' '}
-        <input
-          type="text"
-          defaultValue="16 June, 2022"
-          className="edit-task__input"
-        />
+        Due Date
+        <DateSetter />
       </label>
       <hr />
       <label htmlFor="" className="edit__instruction">
