@@ -12,6 +12,6 @@ export default async function GetTasksFromApi() {
   const ApiResult = await fetch(
     'https://629df86a3dda090f3c107c4d.mockapi.io/results'
   )
-  const Results = ApiResult.json()
+  const Results = await ApiResult.json()
   return Results
 }
