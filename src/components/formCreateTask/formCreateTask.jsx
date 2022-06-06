@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DateSetter from '../dateSetter/DateSetter'
 import { Link } from 'react-router-dom'
+import Buttons from '../buttons/Buttons'
 
 const FormCreateTask = () => {
   const [title, setTitle] = useState('')
@@ -54,9 +55,7 @@ const FormCreateTask = () => {
           />
         </label>
         <hr />
-        <button type="submit" onClick={onHandleSubmit}>
-          Enviar
-        </button>
+        <Buttons event={onHandleSubmit} />
       </form>
     </>
   )

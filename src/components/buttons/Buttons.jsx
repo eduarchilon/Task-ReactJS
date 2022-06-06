@@ -2,7 +2,7 @@ import React from 'react'
 import './buttons.css'
 import { Link } from 'react-router-dom'
 
-const Buttons = () => {
+const Buttons = ({event}) => {
   return (
     <div className="container__buttons">
       <Link to="/">
@@ -10,7 +10,7 @@ const Buttons = () => {
       </Link>
 
       <Link to="/">
-        <button className="btnSave">Save</button>
+        <button className="btnSave" onClick={event}>Save</button>
       </Link>
     </div>
   )

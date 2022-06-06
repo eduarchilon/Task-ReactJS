@@ -13,7 +13,7 @@ function AddTask() {
         <FormCreateTask />
       </div>
 
-      <Buttons />
+      {/* <Buttons /> */}
     </div>
   )
 }
