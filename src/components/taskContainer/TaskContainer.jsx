@@ -2,8 +2,11 @@ import React from 'react'
 import TaskItem from '../taskItem/TaskItem'
 import { GetAllTasks } from '../../services/services'
 import './TaskContainer.css'
+import GetTasksFromApi from '../../services/services'
 
 function TaskContainer() {
+  const TasksApi = GetTasksFromApi()
+  console.log(TasksApi)
   const AllTasks = GetAllTasks()
   return (
     <div className="alltask__container">
