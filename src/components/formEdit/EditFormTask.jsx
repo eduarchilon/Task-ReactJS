@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import './editFormTask.css'
-import { getAllLabels } from '../../services/services'
 import OptionLabel from '../optionLabel/OptionLabel'
 import DateSetter from '../dateSetter/DateSetter'
+import { url } from '../taskContainer/TaskContainer'
 
 const EditFormTask = () => {
-  const Categories = getAllLabels()
+  const [task, setTask] = useState({})
+  const { id } = useParams()
+  console.log(id)
+
+  const getTask = async () => {
+    const results = await fetch(`${url}results/${id}`)
+    const result = await results.json()
+    setTask(result)
+  }
+
+  useEffect(() => {
+    getTask()
+  }, [])
 
   return (
     <div className="container__formTask ">
@@ -16,7 +29,7 @@ const EditFormTask = () => {
         </Link>
         <input
           type="text"
-          defaultValue="Study for test"
+          value={task.name}
           className="edit-task__title-input"
         />
       </div>
@@ -32,9 +45,7 @@ const EditFormTask = () => {
             id="labelSelect"
             className="edit__label-select"
           >
-            {Categories.map((category, index) => {
-              return <OptionLabel key={index} value={category} />
-            })}
+            <option>{task.category}</option>
           </select>
         </div>
       </div>
@@ -45,7 +56,8 @@ const EditFormTask = () => {
       </label>
       <hr />
       <label htmlFor="" className="edit__instruction">
-        Add a comment <input type="text" className="edit-task__input" />
+        Add a comment{' '}
+        <input type="text" className="edit-task__input" value={task.message} />
       </label>
       <hr />
     </div>

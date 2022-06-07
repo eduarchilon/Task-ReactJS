@@ -19,14 +19,14 @@ function TaskContainer() {
 
   return (
     <div className="alltask__container">
-      {all.map(({ id, title, message, due_date, label }) => {
+      {all.map(({ id, name, message, date, category }) => {
         return (
           <TaskItem
             key={id}
             id={id}
-            title={title}
-            due_date={due_date}
-            labels={label}
+            name={name}
+            date={date}
+            category={category}
           />
         )
       })}

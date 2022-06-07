@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import Buttons from '../buttons/Buttons'
 
 const FormCreateTask = () => {
-  const [title, setTitle] = useState('')
-  const [label, setLabel] = useState('')
+  const [name, setTitle] = useState('')
+  const [category, setLabel] = useState('')
   const [date, setDate] = useState('')
   const [message, setMessage] = useState('')
 
@@ -15,7 +15,7 @@ const FormCreateTask = () => {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: '1', title, label, date, message }),
+      body: JSON.stringify({ id: '1', name, category, date, message }),
     }
 
     fetch('https://629df86a3dda090f3c107c4d.mockapi.io/results', requestOptions)
