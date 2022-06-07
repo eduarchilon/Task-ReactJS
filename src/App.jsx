@@ -12,6 +12,7 @@ export function App() {
           <Route path="/" element={<Home />} />
           <Route path="/addtask" element={<AddTask />} />
           <Route path="/edittask" element={<EditTask />} />
+          <Route path="/edittask/:id" element={<EditTask />} />
         </Routes>
       </BrowserRouter>
     </Fragment>
