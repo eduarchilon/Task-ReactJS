@@ -24,9 +24,12 @@ export default function TaskSection() {
   }
 
   const searchTask=(e)=>{
-    console.log(e.target.value)
     setSearch(e.target.value)
-    filterSearh(task)
+    if(e.target.value===null){
+      getAll()
+    }else{
+      filterSearh(task)
+    }
   }
 
 
@@ -36,7 +39,7 @@ export default function TaskSection() {
         return item;
       }
     })
-    setTaskItem(resultSearch)
+    setTaskItem([...resultSearch])
     console.log(taskItem)
   }
 
@@ -46,10 +49,10 @@ export default function TaskSection() {
       <div>
         <h1 className="title">All Tasks</h1>
         <hr className="title__hr--mobile" />
-        <input type="search" placeholder="Search" className="input-search" onChange={searchTask}/>
+        <input type="search" placeholder="Search" className="input-search" onChange={searchTask} id="search"/>
       </div>
 
-      <TaskContainer />
+      <TaskContainer prop={taskItem}/>
 
       <Link to="/AddTask">
         <button type="button" className="btn-plus">
