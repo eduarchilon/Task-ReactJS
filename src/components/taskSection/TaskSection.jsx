@@ -37,7 +37,6 @@ export default function TaskSection() {
 
   const searchTask=(e)=>{
     const value = e.target.value
-    console.log(value)
     setSearch(e.target.value)
     if(!value){
       getAll()
