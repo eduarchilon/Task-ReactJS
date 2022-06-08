@@ -4,8 +4,7 @@ import './TaskContainer.css'
 
 export const url = 'https://629df86a3dda090f3c107c4d.mockapi.io/'
 
-function TaskContainer({prop}) {
-  
+function TaskContainer({ prop }) {
   // const [all, setAll] = useState([])
 
   // const getAll = async () => {
@@ -20,7 +19,7 @@ function TaskContainer({prop}) {
 
   return (
     <div className="alltask__container">
-      {prop.map(({ id, name, message, date, category }) => {
+      {prop.map(({ id, name, message, date, category, completed }) => {
         return (
           <TaskItem
             key={id}
@@ -28,6 +27,7 @@ function TaskContainer({prop}) {
             name={name}
             date={date}
             category={category}
+            completed={completed}
           />
         )
       })}

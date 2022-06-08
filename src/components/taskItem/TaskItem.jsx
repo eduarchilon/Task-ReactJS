@@ -1,15 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './taskitem.css'
 import { Link } from 'react-router-dom'
+import { set } from 'date-fns'
 
 function TaskItem(props) {
-  const { id, name, date, category } = props
-  // const [task, setTask] = useState()
+  const { id, name, date, category, completed } = props
+
+  const [isCompleted, setIsCompleted] = useState(completed)
+
+  const changeCompleted = (event) => {
+    const checked = event.target.checked
+    fetch(`https://629df86a3dda090f3c107c4d.mockapi.io/results/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ completed: checked }),
+    }).then((res) => res.json())
+  }
+
+  useEffect(() => {
+    setIsCompleted()
+  }, [])
 
   const removeTask = () => {
     const idTask = document.getElementById(id)
-
-    console.log(id)
 
     fetch(`https://629df86a3dda090f3c107c4d.mockapi.io/results/${id}`, {
       method: 'DELETE',
@@ -27,6 +40,8 @@ function TaskItem(props) {
         name="checkbox"
         id="checkbox"
         className="checkbox-style"
+        defaultChecked={isCompleted}
+        onChange={changeCompleted}
       />
 
       <div className="taskitem__content">

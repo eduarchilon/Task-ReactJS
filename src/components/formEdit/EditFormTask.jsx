@@ -9,7 +9,6 @@ import { url } from '../taskContainer/TaskContainer'
 const EditFormTask = () => {
   const [task, setTask] = useState({})
   const { id } = useParams()
-  console.log(id)
 
   const getTask = async () => {
     const results = await fetch(`${url}results/${id}`)
@@ -29,7 +28,7 @@ const EditFormTask = () => {
         </Link>
         <input
           type="text"
-          value={task.name}
+          defaultValue={task.name}
           className="edit-task__title-input"
         />
       </div>
@@ -57,7 +56,11 @@ const EditFormTask = () => {
       <hr />
       <label htmlFor="" className="edit__instruction">
         Add a comment{' '}
-        <input type="text" className="edit-task__input" value={task.message} />
+        <input
+          type="text"
+          className="edit-task__input"
+          defaultValue={task.message}
+        />
       </label>
       <hr />
     </div>
