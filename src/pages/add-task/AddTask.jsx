@@ -1,5 +1,4 @@
 import React from 'react'
-import Buttons from '../../components/buttons/Buttons'
 import FormCreateTask from '../../components/formCreateTask/formCreateTask'
 import { Link } from 'react-router-dom'
 
@@ -12,8 +11,6 @@ function AddTask() {
         </Link>
         <FormCreateTask />
       </div>
-
-      {/* <Buttons /> */}
     </div>
   )
 }

@@ -45,8 +45,6 @@ const EditFormTask = () => {
     return setLabels(categories)
   }
 
-  console.log(labels)
-
   useEffect(() => {
     getAllLabels()
   }, [])
@@ -80,8 +78,6 @@ const EditFormTask = () => {
             {labels.map((label) => (
               <OptionLabel value={label}>{label}</OptionLabel>
             ))}
-
-            {/* <option>{task.category}</option> */}
           </select>
         </div>
       </div>

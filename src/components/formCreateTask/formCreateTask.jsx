@@ -20,9 +20,10 @@ const FormCreateTask = () => {
       body: JSON.stringify({ id: '1', name, category, date, message }),
     }
 
-    fetch('https://629df86a3dda090f3c107c4d.mockapi.io/results', requestOptions)
-      .then((response) => response.json())
-      .then((result) => console.log(result))
+    fetch(
+      'https://629df86a3dda090f3c107c4d.mockapi.io/results',
+      requestOptions
+    ).then((response) => response.json())
     navigate(`/`)
   }
 
