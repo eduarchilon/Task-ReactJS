@@ -9,11 +9,27 @@ import { url } from '../taskContainer/TaskContainer'
 const EditFormTask = () => {
   const [task, setTask] = useState({})
   const { id } = useParams()
+  const [name, setTitle] = useState('')
+  const [category, setLabel] = useState('')
+  const [date, setDate] = useState('')
+  const [message, setMessage] = useState('')
 
   const getTask = async () => {
     const results = await fetch(`${url}results/${id}`)
     const result = await results.json()
     setTask(result)
+  }
+
+  const saveEdition = (event) => {
+    fetch(`https://629df86a3dda090f3c107c4d.mockapi.io/results/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        category: category,
+        message: message,
+      }),
+    }).then((res) => res.json())
   }
 
   useEffect(() => {
@@ -30,6 +46,7 @@ const EditFormTask = () => {
           type="text"
           defaultValue={task.name}
           className="edit-task__title-input"
+          onChange={(event) => setTitle(event.target.value)}
         />
       </div>
 
@@ -43,6 +60,7 @@ const EditFormTask = () => {
             name="label-select"
             id="labelSelect"
             className="edit__label-select"
+            onChange={(event) => setLabel(event.target.value)}
           >
             <option>{task.category}</option>
           </select>
@@ -60,9 +78,11 @@ const EditFormTask = () => {
           type="text"
           className="edit-task__input"
           defaultValue={task.message}
+          onChange={(event) => setMessage(event.target.value)}
         />
       </label>
       <hr />
+      <button onClick={saveEdition}>guardar</button>
     </div>
   )
 }

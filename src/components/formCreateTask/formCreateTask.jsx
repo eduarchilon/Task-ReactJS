@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import DateSetter from '../dateSetter/DateSetter'
 import { Link } from 'react-router-dom'
 import Buttons from '../buttons/Buttons'
+import { useNavigate } from 'react-router-dom'
 
 const FormCreateTask = () => {
   const [name, setTitle] = useState('')
   const [category, setLabel] = useState('')
   const [date, setDate] = useState('')
   const [message, setMessage] = useState('')
+  const navigate = useNavigate()
 
   const onHandleSubmit = (e) => {
     e.preventDefault()
@@ -21,6 +23,7 @@ const FormCreateTask = () => {
     fetch('https://629df86a3dda090f3c107c4d.mockapi.io/results', requestOptions)
       .then((response) => response.json())
       .then((result) => console.log(result))
+    navigate(`/`)
   }
 
   return (
