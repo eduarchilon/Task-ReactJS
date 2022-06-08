@@ -13,6 +13,10 @@ export default function TaskSection() {
   const [taskItem, setTaskItem] =useState([])
   const [search, setSearch] = useState('')
 
+  useEffect(()=>{
+    getAll()
+  },[search])
+
   const getAll = async () => {
     await fetch(`${url}results`)
     .then(response=>response.json())
@@ -21,7 +25,6 @@ export default function TaskSection() {
 
   const searchTask=(e)=>{
     console.log(e.target.value)
-    getAll()
     setSearch(e.target.value)
     filterSearh(task)
   }
