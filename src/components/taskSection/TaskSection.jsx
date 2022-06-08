@@ -9,50 +9,52 @@ const url = 'https://629df86a3dda090f3c107c4d.mockapi.io/'
 
 export default function TaskSection() {
 
-  const [task, setTask] = useState([])
-  const [taskItem, setTaskItem] =useState([])
   const [search, setSearch] = useState('')
+  const [task, setTask] = useState([])
 
-  useEffect(()=>{
-    getAll()
-  },[search])
 
-  const getAll = async () => {
+
+   const getAll = async () => {
     await fetch(`${url}results`)
     .then(response=>response.json())
     .then(response=>setTask(response))
   }
 
-  const searchTask=(e)=>{
-    setSearch(e.target.value)
-    if(e.target.value===null){
-      getAll()
-    }else{
-      filterSearh(task)
-    }
-  }
-
-
-  const filterSearh=(value)=>{
-    const resultSearch = value.filter((item) => {
-      if(item.name.toLowerCase().includes(search.toLowerCase())){
+  const filterSearh=(task, value)=>{
+    const resultSearch = task.filter((item) => {
+      if(item.name.toLowerCase().includes(value.toLowerCase())){
         return item;
       }
     })
-    setTaskItem([...resultSearch])
-    console.log(taskItem)
-  }
+    setTask([...resultSearch])
+   }
 
+  useEffect(()=>{
+    if(task){
+      getAll()
+    }
+  }, [])
+
+  const searchTask=(e)=>{
+    const value = e.target.value
+    console.log(value)
+    setSearch(e.target.value)
+    if(!value){
+      getAll()
+    }else{
+      filterSearh(task, search)
+    }
+  }
 
   return (
     <div className="task__section">
       <div>
         <h1 className="title">All Tasks</h1>
         <hr className="title__hr--mobile" />
-        <input type="search" placeholder="Search" className="input-search" onChange={searchTask} id="search"/>
+        <input type="search" placeholder="Search" className="input-search" onChange={searchTask} />
       </div>
 
-      <TaskContainer prop={taskItem}/>
+      <TaskContainer prop={task} />
 
       <Link to="/AddTask">
         <button type="button" className="btn-plus">
