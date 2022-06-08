@@ -3,6 +3,7 @@ import DateSetter from '../dateSetter/DateSetter'
 import { Link } from 'react-router-dom'
 import Buttons from '../buttons/Buttons'
 import { useNavigate } from 'react-router-dom'
+import { format } from 'date-fns'
 
 const FormCreateTask = () => {
   const [name, setTitle] = useState('')
@@ -46,7 +47,13 @@ const FormCreateTask = () => {
         </label>
 
         <label htmlFor="">
-          Due Date <DateSetter />
+          Due Date{' '}
+          <DateSetter
+            onChange={(newDate) => {
+              const formatDate = format(newDate, 'dd/MM/yyyy')
+              setDate(formatDate)
+            }}
+          />
         </label>
         <hr />
         <label htmlFor="">

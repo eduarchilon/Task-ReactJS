@@ -1,11 +1,17 @@
-import * as React from 'react'
+import { useState, useEffect } from 'react'
 import TextField from '@mui/material/TextField'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { parse } from 'date-fns'
 
-export default function DateSetter() {
-  const [value, setValue] = React.useState(null)
+export default function DateSetter({ onChange, dueDate }) {
+  const [value, setValue] = useState()
+
+  useEffect(() => {
+    console.log(dueDate)
+    setValue(parse(dueDate, 'dd/MM/yyyy', new Date()))
+  }, [dueDate])
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -13,8 +19,11 @@ export default function DateSetter() {
         label="Basic example"
         value={value}
         onChange={(newValue) => {
+          console.log(newValue)
           setValue(newValue)
+          onChange(newValue)
         }}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         renderInput={(params) => <TextField {...params} />}
       />
     </LocalizationProvider>

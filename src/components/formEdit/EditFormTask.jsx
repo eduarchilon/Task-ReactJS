@@ -5,16 +5,16 @@ import './editFormTask.css'
 import OptionLabel from '../optionLabel/OptionLabel'
 import DateSetter from '../dateSetter/DateSetter'
 import { url } from '../taskContainer/TaskContainer'
-import { getAllLabels } from '../../services/services'
+import { format } from 'date-fns'
 
 const EditFormTask = () => {
   const [task, setTask] = useState({})
   const [labels, setLabels] = useState([])
   const { id } = useParams()
-  const [name, setTitle] = useState('')
-  const [category, setLabel] = useState('')
-  const [date, setDate] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setTitle] = useState(task.name)
+  const [category, setLabel] = useState(task.category)
+  const [date, setDate] = useState(task.date)
+  const [message, setMessage] = useState(task.message)
 
   const getTask = async () => {
     const results = await fetch(`${url}results/${id}`)
@@ -28,6 +28,7 @@ const EditFormTask = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: name,
+        date: date,
         category: category,
         message: message,
       }),
@@ -88,7 +89,13 @@ const EditFormTask = () => {
 
       <label htmlFor="" className="edit__instruction">
         Due Date
-        <DateSetter />
+        <DateSetter
+          onChange={(newDate) => {
+            const formatDate = format(newDate, 'dd/MM/yyyy')
+            setDate(formatDate)
+          }}
+          dueDate={task.date}
+        />
       </label>
       <hr />
       <label htmlFor="" className="edit__instruction">
