@@ -49,6 +49,13 @@ const EditFormTask = () => {
     getAllLabels()
   }, [])
 
+  const filteredLabels = []
+  labels.forEach((element) => {
+    if (!filteredLabels.includes(element)) {
+      filteredLabels.push(element)
+    }
+  })
+
   return (
     <div className="container__formTask ">
       <div className="edit__title-container">
@@ -75,7 +82,7 @@ const EditFormTask = () => {
             className="edit__label-select"
             onChange={(event) => setLabel(event.target.value)}
           >
-            {labels.map((label) => (
+            {filteredLabels.map((label) => (
               <OptionLabel value={label}>{label}</OptionLabel>
             ))}
           </select>
