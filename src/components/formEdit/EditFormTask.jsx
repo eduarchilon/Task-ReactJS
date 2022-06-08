@@ -46,11 +46,16 @@ const EditFormTask = () => {
     return setLabels(categories)
   }
 
-  console.log(labels)
-
   useEffect(() => {
     getAllLabels()
   }, [])
+
+  const filteredLabels = []
+  labels.forEach((element) => {
+    if (!filteredLabels.includes(element)) {
+      filteredLabels.push(element)
+    }
+  })
 
   return (
     <div className="container__formTask ">
@@ -78,11 +83,9 @@ const EditFormTask = () => {
             className="edit__label-select"
             onChange={(event) => setLabel(event.target.value)}
           >
-            {labels.map((label) => (
+            {filteredLabels.map((label) => (
               <OptionLabel value={label}>{label}</OptionLabel>
             ))}
-
-            {/* <option>{task.category}</option> */}
           </select>
         </div>
       </div>

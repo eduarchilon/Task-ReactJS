@@ -4,6 +4,7 @@ import TaskSection from '../../components/taskSection/TaskSection'
 import '../home/home.css'
 //import { getAllLabels } from '../../services/services'
 import { url } from '../../components/taskContainer/TaskContainer'
+import { set } from 'date-fns'
 
 function Home() {
   const [categories, setCategories] = useState([])
@@ -18,6 +19,13 @@ function Home() {
     getAllLabels()
   }, [])
 
+  const filteredLabels = []
+  categories.forEach((element) => {
+    if (!filteredLabels.includes(element)) {
+      filteredLabels.push(element)
+    }
+  })
+
   return (
     <div className="container home">
       <div className="label__container">
@@ -27,7 +35,7 @@ function Home() {
               All
             </a>
           </li>
-          {categories.map((Category, index) => {
+          {filteredLabels.map((Category, index) => {
             return <Labels key={index} category={Category} />
           })}
         </ul>
