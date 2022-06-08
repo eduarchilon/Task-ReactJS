@@ -5,9 +5,11 @@ import './editFormTask.css'
 import OptionLabel from '../optionLabel/OptionLabel'
 import DateSetter from '../dateSetter/DateSetter'
 import { url } from '../taskContainer/TaskContainer'
+import { getAllLabels } from '../../services/services'
 
 const EditFormTask = () => {
   const [task, setTask] = useState({})
+  const [labels, setLabels] = useState([])
   const { id } = useParams()
 
   const getTask = async () => {
@@ -18,6 +20,19 @@ const EditFormTask = () => {
 
   useEffect(() => {
     getTask()
+  }, [])
+
+  const getAllLabels = async () => {
+    const results = await fetch(`${url}results`)
+    const allResults = await results.json()
+    const categories = allResults.map((element) => element.category)
+    return setLabels(categories)
+  }
+
+  console.log(labels)
+
+  useEffect(() => {
+    getAllLabels()
   }, [])
 
   return (
@@ -44,7 +59,11 @@ const EditFormTask = () => {
             id="labelSelect"
             className="edit__label-select"
           >
-            <option>{task.category}</option>
+            {labels.map((label) => (
+              <OptionLabel value={label}>{label}</OptionLabel>
+            ))}
+
+            {/* <option>{task.category}</option> */}
           </select>
         </div>
       </div>
