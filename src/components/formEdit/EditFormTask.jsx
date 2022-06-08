@@ -82,9 +82,10 @@ const EditFormTask = () => {
             id="labelSelect"
             className="edit__label-select"
             onChange={(event) => setLabel(event.target.value)}
+            value={task.category}
           >
             {filteredLabels.map((label) => (
-              <OptionLabel value={label}>{label}</OptionLabel>
+              <OptionLabel value={label}></OptionLabel>
             ))}
           </select>
         </div>
