@@ -32,7 +32,7 @@ function TaskItem(props) {
 
   useEffect(() => {
     isDateOk()
-  }, [])
+  })
 
   useEffect(() => {
     setIsCompleted()
