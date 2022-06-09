@@ -5,6 +5,7 @@ h1 {
 .container__titleTask {
   display: flex;
   position: relative;
+  height: 100%;
 }
 
 i {

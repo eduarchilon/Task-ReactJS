@@ -98,15 +98,17 @@ const EditFormTask = () => {
 
         <label htmlFor="" className="edit__instruction">
           Due Date
-          <DateSetter
-            onChange={(newDate) => {
-              const formatDate = format(newDate, 'dd/MM/yyyy')
-              setDate(formatDate)
-            }}
-            dueDate={task.date}
-          />
+          <div className="datesetter__container">
+            <DateSetter
+              onChange={(newDate) => {
+                const formatDate = format(newDate, 'dd/MM/yyyy')
+                setDate(formatDate)
+              }}
+              dueDate={task.date}
+            />
+          </div>
         </label>
-        <hr />
+        <hr className="edit-hr" />
         <label htmlFor="" className="edit__instruction">
           Add a comment{' '}
           <input
@@ -116,7 +118,7 @@ const EditFormTask = () => {
             onChange={(event) => setMessage(event.target.value)}
           />
         </label>
-        <hr />
+        <hr className="edit-hr" />
         <div className="container__buttonsCreateTask">
           <Buttons event={saveEdition} />
         </div>

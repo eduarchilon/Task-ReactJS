@@ -40,22 +40,26 @@ const FormCreateTask = () => {
         />
         <label htmlFor="">
           Label{' '}
-          <input
-            type="text"
-            defaultValue="Empty"
-            className="edit-task__label"
-            onChange={(event) => setLabel(event.target.value)}
-          />
+          <div className="create__label-container">
+            <input
+              type="text"
+              defaultValue="Empty"
+              className="edit-task__label"
+              onChange={(event) => setLabel(event.target.value)}
+            />
+          </div>
         </label>
 
         <label htmlFor="">
           Due Date{' '}
-          <DateSetter
-            onChange={(newDate) => {
-              const formatDate = format(newDate, 'dd/MM/yyyy')
-              setDate(formatDate)
-            }}
-          />
+          <div className="datesetter__container">
+            <DateSetter
+              onChange={(newDate) => {
+                const formatDate = format(newDate, 'dd/MM/yyyy')
+                setDate(formatDate)
+              }}
+            />
+          </div>
         </label>
         <hr />
         <label htmlFor="">
