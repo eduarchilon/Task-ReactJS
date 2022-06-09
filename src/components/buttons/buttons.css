@@ -22,3 +22,7 @@
   width: 10vw;
   border: none;
 }
+
+.container__buttonsCreateTask {
+  position: absolute;
+}

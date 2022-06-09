@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Buttons from '../buttons/Buttons'
 import { useNavigate } from 'react-router-dom'
 import { format } from 'date-fns'
+import './formCreateTask.css'
 
 const FormCreateTask = () => {
   const [name, setTitle] = useState('')
@@ -29,8 +30,8 @@ const FormCreateTask = () => {
   }
 
   return (
-    <>
-      <form className="container__formTask">
+    <div className="container__createTask">
+      <div className="container__formTask">
         <input
           type="text"
           defaultValue="Untitled"
@@ -66,9 +67,11 @@ const FormCreateTask = () => {
           />
         </label>
         <hr />
-        <Buttons event={onHandleSubmit} />
-      </form>
-    </>
+        <div className="container__buttonsCreateTask">
+          <Buttons event={onHandleSubmit} />
+        </div>
+      </div>
+    </div>
   )
 }
 
