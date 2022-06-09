@@ -7,6 +7,7 @@ function TaskItem(props) {
   const { id, name, date, category, completed } = props
 
   const [isCompleted, setIsCompleted] = useState(completed)
+  const [isLate, setIsLate] = useState(false)
 
   const changeCompleted = (event) => {
     const checked = event.target.checked
@@ -16,6 +17,22 @@ function TaskItem(props) {
       body: JSON.stringify({ completed: checked }),
     }).then((res) => res.json())
   }
+  const isDateOk = () => {
+    const fechaDeTask = new Date(props.date)
+    console.log(fechaDeTask)
+    const fechaActual = new Date()
+    if (fechaDeTask < fechaActual) {
+      console.log('Loco te re pasaste')
+      setIsLate(true)
+    } else {
+      console.log('tenes tiempo')
+      setIsLate(false)
+    }
+  }
+
+  useEffect(() => {
+    isDateOk()
+  }, [])
 
   useEffect(() => {
     setIsCompleted()
@@ -42,7 +59,7 @@ function TaskItem(props) {
         onChange={changeCompleted}
       />
 
-      <div className="taskitem__content">
+      <div className={isLate ? 'taskitem__late' : 'taskitem__content'}>
         <div className="task-text__container">
           <div className="task-titlelabel__container">
             <p className="task-title">{name}</p>
