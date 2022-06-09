@@ -8,6 +8,7 @@ import { url } from '../taskContainer/TaskContainer'
 import { format } from 'date-fns'
 import Buttons from '../buttons/Buttons'
 import { useNavigate } from 'react-router-dom'
+import Multiselect from 'multiselect-react-dropdown';
 
 const EditFormTask = () => {
   const [task, setTask] = useState({})
@@ -82,17 +83,18 @@ const EditFormTask = () => {
             Label
           </label>
           <div className="select__container ">
-            <select
-              name="label-select"
-              id="labelSelect"
-              className="edit__label-select"
-              onChange={(event) => setLabel(event.target.value)}
-              value={task.category}
-            >
-              {filteredLabels.map((label) => (
-                <OptionLabel value={label}></OptionLabel>
-              ))}
-            </select>
+            <Multiselect
+              isObject={false}
+              onRemove={(event) => {
+                console.log(event);
+              }}
+              onSelect={(event) => {
+                console.log(event);
+              }}
+              options={filteredLabels.map((label)=>label)}
+              selectedValues={[task.category]}
+              showCheckbox
+            />
           </div>
         </div>
 

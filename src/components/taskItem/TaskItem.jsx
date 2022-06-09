@@ -19,13 +19,10 @@ function TaskItem(props) {
   }
   const isDateOk = () => {
     const fechaDeTask = new Date(props.date)
-    console.log(fechaDeTask)
     const fechaActual = new Date()
     if (fechaDeTask < fechaActual) {
-      console.log('Loco te re pasaste')
       setIsLate(true)
     } else {
-      console.log('tenes tiempo')
       setIsLate(false)
     }
   }
@@ -44,7 +41,7 @@ function TaskItem(props) {
     fetch(`https://629df86a3dda090f3c107c4d.mockapi.io/results/${id}`, {
       method: 'DELETE',
     }).then((res) => res.json())
-
+    
     idTask.classList.add('remove')
   }
 
