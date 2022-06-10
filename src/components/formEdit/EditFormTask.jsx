@@ -66,9 +66,6 @@ const EditFormTask = () => {
     <div className="container__createTask">
       <div className="container__formTask ">
         <div className="edit__title-container">
-          <Link to="/">
-            <i className="fa-solid fa-arrow-left fa-2xl"></i>{' '}
-          </Link>
           <input
             type="text"
             defaultValue={task.name}
@@ -94,6 +91,7 @@ const EditFormTask = () => {
               options={filteredLabels.map((label) => label)}
               selectedValues={[task.category]}
               placeholder=""
+              /* singleSelect="true" */
               /* showCheckbox */
               style={{
                 chips: {
@@ -102,6 +100,7 @@ const EditFormTask = () => {
                   padding: '5px',
                   'font-family': 'Lato',
                   'justify-content': 'center',
+                  color: 'var(--text-white)',
                 },
                 multiselectContainer: {},
                 searchBox: {
