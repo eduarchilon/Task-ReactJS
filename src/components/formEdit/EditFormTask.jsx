@@ -82,16 +82,13 @@ const EditFormTask = () => {
           <div className="select__container ">
             <Multiselect
               isObject={false}
-              onRemove={(event) => {
-                console.log(event)
-              }}
               onSelect={(event) => {
-                console.log(event)
+                setLabel(event[0])
               }}
               options={filteredLabels.map((label) => label)}
               selectedValues={[task.category]}
               placeholder=""
-              /* singleSelect="true" */
+              singleSelect="true"
               /* showCheckbox */
               style={{
                 chips: {
@@ -120,7 +117,7 @@ const EditFormTask = () => {
                   'border-radius': '5px',
                   color: 'var(--text-white)',
                   'text-align': 'center',
-                  'font-size': '13px'
+                  'font-size': '13px',
                 },
               }}
             />
