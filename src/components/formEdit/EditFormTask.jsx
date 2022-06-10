@@ -100,6 +100,7 @@ const EditFormTask = () => {
                   background: '#ea5959',
                   width: '115px',
                   padding: '5px',
+                  'border-radius': '5px',
                   'font-family': 'Lato',
                   'justify-content': 'center',
                 },
@@ -120,6 +121,7 @@ const EditFormTask = () => {
                   'border-radius': '5px',
                   color: 'var(--text-white)',
                   'text-align': 'center',
+                  'font-size': '13px'
                 },
               }}
             />
