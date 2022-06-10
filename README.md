@@ -2,7 +2,7 @@
 ***
 Project made with React JS. in which we can organize our tasks.
 
-<![capture](https://github.com/eduarchilon/Task-ReactJS/blob/master/public/Captura.PNG)>
+![capture](https://github.com/eduarchilon/Task-ReactJS/blob/master/public/Captura.PNG)
 
 
 # USER STORIES
