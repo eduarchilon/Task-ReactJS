@@ -43,7 +43,7 @@ const FormCreateTask = () => {
             <input
               type="text"
               defaultValue="Empty"
-              className="edit-task__label"
+              className="create__label-input"
               onChange={(event) => setLabel(event.target.value)}
             />
           </div>

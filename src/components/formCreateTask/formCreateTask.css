@@ -10,3 +10,11 @@
   width: 75%;
   float: right;
 }
+
+.create__label-input {
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--placeholder);
+}
