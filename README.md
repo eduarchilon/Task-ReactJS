@@ -1,6 +1,6 @@
 # TODO LIST
 ***
-Proyecto hecho con React JS. en el que podremos oganizar nuestras tareas.
+Project made with React JS. in which we can organize our tasks.
 
 <![capture](https://github.com/eduarchilon/Task-ReactJS/blob/master/public/Captura.PNG)>
 
