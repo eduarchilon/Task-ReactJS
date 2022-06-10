@@ -87,7 +87,7 @@ const EditFormTask = () => {
               selectedValues={[task.category]}
               placeholder=""
               singleSelect="true"
-              /* showCheckbox */
+              customCloseIcon="none"
               style={{
                 chips: {
                   background: '#ea5959',

@@ -41,7 +41,7 @@ function TaskItem(props) {
     fetch(`https://629df86a3dda090f3c107c4d.mockapi.io/results/${id}`, {
       method: 'DELETE',
     }).then((res) => res.json())
-    
+
     idTask.classList.add('remove')
   }
 
