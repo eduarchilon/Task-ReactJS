@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import TaskItem from '../taskItem/TaskItem'
 import './TaskContainer.css'
 

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import { Link } from 'react-router-dom'
 import './editFormTask.css'
-import OptionLabel from '../optionLabel/OptionLabel'
 import DateSetter from '../dateSetter/DateSetter'
 import { url } from '../taskContainer/TaskContainer'
 import { format } from 'date-fns'

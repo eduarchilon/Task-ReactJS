@@ -18,11 +18,9 @@ export default function DateSetter({ onChange, dueDate }) {
         label="Basic example"
         value={value}
         onChange={(newValue) => {
-          console.log(newValue)
           setValue(newValue)
           onChange(newValue)
         }}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         renderInput={(params) => <TextField {...params} />}
       />
     </LocalizationProvider>

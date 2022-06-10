@@ -1,8 +1,6 @@
 import React from 'react'
-import Buttons from '../../components/buttons/Buttons'
 import EditFormTask from '../../components/formEdit/EditFormTask'
 import './editTask.css'
-import { saveEdition } from '../../components/formEdit/EditFormTask'
 import { Link } from 'react-router-dom'
 
 function EditTask() {

@@ -4,7 +4,6 @@ import TaskSection from '../../components/taskSection/TaskSection'
 import '../home/home.css'
 //import { getAllLabels } from '../../services/services'
 import { url } from '../../components/taskContainer/TaskContainer'
-import { set } from 'date-fns'
 
 function Home() {
   const [categories, setCategories] = useState([])
