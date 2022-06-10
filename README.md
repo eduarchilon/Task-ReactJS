@@ -2,7 +2,7 @@
 ***
 Proyecto hecho con React JS. en el que podremos oganizar nuestras tareas.
 
-<![alt](/public/Captura.PNG>
+<![capture]([/public/Captura.PNG](https://github.com/eduarchilon/Task-ReactJS/blob/master/public/Captura.PNG)>
 
 
 # USER STORIES
@@ -42,7 +42,8 @@ Run Project:
 -----
 
 Run DatePicker:
-$npm install @date-io/date-fns
+
+- $npm install @date-io/date-fns
 ----
 
 # COLABORATORS AND CONTACT
