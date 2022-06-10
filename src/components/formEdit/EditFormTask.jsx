@@ -8,7 +8,7 @@ import { url } from '../taskContainer/TaskContainer'
 import { format } from 'date-fns'
 import Buttons from '../buttons/Buttons'
 import { useNavigate } from 'react-router-dom'
-import Multiselect from 'multiselect-react-dropdown';
+import Multiselect from 'multiselect-react-dropdown'
 
 const EditFormTask = () => {
   const [task, setTask] = useState({})
@@ -86,14 +86,42 @@ const EditFormTask = () => {
             <Multiselect
               isObject={false}
               onRemove={(event) => {
-                console.log(event);
+                console.log(event)
               }}
               onSelect={(event) => {
-                console.log(event);
+                console.log(event)
               }}
-              options={filteredLabels.map((label)=>label)}
+              options={filteredLabels.map((label) => label)}
               selectedValues={[task.category]}
-              showCheckbox
+              placeholder=""
+              /* showCheckbox */
+              style={{
+                chips: {
+                  background: '#ea5959',
+                  width: '115px',
+                  padding: '5px',
+                  'font-family': 'Lato',
+                  'justify-content': 'center',
+                },
+                multiselectContainer: {},
+                searchBox: {
+                  border: 'none',
+                },
+                optionContainer: {
+                  background: '#F3F3F3',
+                },
+                option: {
+                  background: '#ea5959',
+                  width: '115px',
+                  padding: '5px',
+                  'font-family': 'Lato',
+                  'justify-content': 'center',
+                  margin: '5px',
+                  'border-radius': '5px',
+                  color: 'var(--text-white)',
+                  'text-align': 'center',
+                },
+              }}
             />
           </div>
         </div>
