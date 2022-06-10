@@ -15,7 +15,7 @@ Proyecto hecho con React JS. en el que podremos oganizar nuestras tareas.
 
 Run Project:
 
-$ $ git clone https://github.com/eduarchilon/Task-ReactJS
+$ git clone https://github.com/eduarchilon/Task-ReactJS
 $ npm install
 $ npm start
 -----
@@ -34,3 +34,8 @@ $npm install @date-io/date-fns
 # PROJECT LINK
 
 https://github.com/eduarchilon/Task-ReactJS
+
+
+# LINK DEPLOY
+
+https://task-react-js.vercel.app/
