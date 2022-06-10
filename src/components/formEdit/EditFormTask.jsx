@@ -66,9 +66,6 @@ const EditFormTask = () => {
     <div className="container__createTask">
       <div className="container__formTask ">
         <div className="edit__title-container">
-          <Link to="/">
-            <i className="fa-solid fa-arrow-left fa-2xl"></i>{' '}
-          </Link>
           <input
             type="text"
             defaultValue={task.name}
@@ -85,23 +82,23 @@ const EditFormTask = () => {
           <div className="select__container ">
             <Multiselect
               isObject={false}
-              onRemove={(event) => {
-                console.log(event)
-              }}
               onSelect={(event) => {
-                console.log(event)
+                setLabel(event[0])
               }}
               options={filteredLabels.map((label) => label)}
               selectedValues={[task.category]}
               placeholder=""
+              singleSelect="true"
               /* showCheckbox */
               style={{
                 chips: {
                   background: '#ea5959',
                   width: '115px',
                   padding: '5px',
+                  'border-radius': '5px',
                   'font-family': 'Lato',
                   'justify-content': 'center',
+                  color: 'var(--text-white)',
                 },
                 multiselectContainer: {},
                 searchBox: {
@@ -120,6 +117,7 @@ const EditFormTask = () => {
                   'border-radius': '5px',
                   color: 'var(--text-white)',
                   'text-align': 'center',
+                  'font-size': '13px',
                 },
               }}
             />

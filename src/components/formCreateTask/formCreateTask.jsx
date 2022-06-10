@@ -37,7 +37,7 @@ const FormCreateTask = () => {
           className="edit-task__title-input"
           onChange={(event) => setTitle(event.target.value)}
         />
-        <label htmlFor="">
+        <label htmlFor="" className="edit__instruction">
           Label{' '}
           <div className="create__label-container">
             <input
@@ -49,7 +49,7 @@ const FormCreateTask = () => {
           </div>
         </label>
 
-        <label htmlFor="">
+        <label htmlFor="" className="edit__instruction">
           Due Date{' '}
           <div className="datesetter__container">
             <DateSetter
@@ -61,7 +61,7 @@ const FormCreateTask = () => {
           </div>
         </label>
         <hr />
-        <label htmlFor="">
+        <label htmlFor="" className="edit__instruction">
           Add a comment{' '}
           <input
             type="text"
