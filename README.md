@@ -2,7 +2,7 @@
 ***
 Proyecto hecho con React JS. en el que podremos oganizar nuestras tareas.
 
-<![capture]([/public/Captura.PNG](https://github.com/eduarchilon/Task-ReactJS/blob/master/public/Captura.PNG)>
+<![capture](https://github.com/eduarchilon/Task-ReactJS/blob/master/public/Captura.PNG)>
 
 
 # USER STORIES
