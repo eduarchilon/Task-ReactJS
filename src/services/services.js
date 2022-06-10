@@ -12,3 +12,9 @@ export const getAllLabels = async () => {
   const categories = allResults.map((element) => element.category)
   return categories
 }
+
+export const getAll = async () => {
+  const results = await fetch(`${url}results`)
+  const allResults = await results.json()
+  return allResults
+}

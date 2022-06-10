@@ -14,6 +14,7 @@ function TaskContainer({ prop }) {
             id={id}
             name={name}
             date={date}
+            message={message}
             category={category}
             completed={completed}
           />

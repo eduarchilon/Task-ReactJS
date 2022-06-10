@@ -8,6 +8,9 @@ import { set } from 'date-fns'
 
 function Home() {
   const [categories, setCategories] = useState([])
+  const [categoryActual, setCategory] = useState('')
+  const [task, setTask] = useState([])
+  const [taskFiltered, setTaskFiltered] = useState([])
 
   const getAllLabels = async () => {
     const results = await fetch(`${url}results`)
@@ -15,8 +18,19 @@ function Home() {
     setCategories(() => allResults.map((element) => element.category))
   }
 
+  const getAllTasks = async () => {
+    const results = await fetch(`${url}results`)
+    const allResults = await results.json()
+    setTask(allResults)
+    setTaskFiltered(allResults)
+  }
+
   useEffect(() => {
     getAllLabels()
+  }, [])
+
+  useEffect(() => {
+    getAllTasks()
   }, [])
 
   const filteredLabels = []
@@ -32,16 +46,34 @@ function Home() {
         <ul className="label__list">
           <li className="label-item">
             <a href="#" className="label-link">
-              All
+              <button className="label-link" onClick={getAllTasks}>
+                All
+              </button>
             </a>
           </li>
           {filteredLabels.map((Category, index) => {
-            return <Labels key={index} category={Category} />
+            return (
+              <Labels
+                categoryActual={categoryActual}
+                setCategory={setCategory}
+                key={index}
+                category={Category}
+                getAllTasks={getAllTasks}
+              />
+            )
           })}
         </ul>
       </div>
       <div className="border-home"></div>
-      <TaskSection />
+      <TaskSection
+        allLabelsFiltered={filteredLabels}
+        categoryActual={categoryActual}
+        task={task}
+        setTask={setTask}
+        getAllTasks={getAllTasks}
+        taskFiltered={taskFiltered}
+        setTaskFiltered={setTaskFiltered}
+      />
     </div>
   )
 }

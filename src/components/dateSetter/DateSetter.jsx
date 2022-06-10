@@ -9,7 +9,6 @@ export default function DateSetter({ onChange, dueDate }) {
   const [value, setValue] = useState()
 
   useEffect(() => {
-    console.log(dueDate)
     setValue(parse(dueDate, 'dd/MM/yyyy', new Date()))
   }, [dueDate])
 

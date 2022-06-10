@@ -3,46 +3,59 @@ import './tasksection.css'
 import '../../style.css'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { set } from 'date-fns'
 
 const url = 'https://629df86a3dda090f3c107c4d.mockapi.io/'
 
-export default function TaskSection() {
-
+export default function TaskSection(props) {
   const [search, setSearch] = useState('')
-  const [task, setTask] = useState([])
 
-
-
-   const getAll = async () => {
+  const getAll = async () => {
     await fetch(`${url}results`)
-    .then(response=>response.json())
-    .then(response=>setTask(response))
+      .then((response) => response.json())
+      .then((response) => props.setTask(response))
   }
 
-  const filterSearh=(task, value)=>{
+  const getAllFiltered = async () => {
+    await fetch(`${url}results`)
+      .then((response) => response.json())
+      .then((response) => props.setTaskFiltered(response))
+  }
+
+  const filterSearh = (task, value) => {
     const resultSearch = task.filter((item) => {
-      if(item.name.toLowerCase().includes(value.toLowerCase())){
-        return item;
+      if (item.name.toLowerCase().includes(value.toLowerCase())) {
+        return item
       }
     })
-    setTask([...resultSearch])
-   }
+    props.setTaskFiltered([...resultSearch])
+  }
 
-  useEffect(()=>{
-    if(task){
+  useEffect(() => {
+    if (props.taskFiltered) {
       getAll()
     }
   }, [])
 
-  const searchTask=(e)=>{
+  useEffect(() => {
+    taskFilteredByLabel()
+  }, [props.categoryActual])
+
+  const searchTask = (e) => {
     const value = e.target.value
     setSearch(e.target.value)
-    if(!value){
+    console.log(search)
+    if (!value) {
       getAll()
-    }else{
-      filterSearh(task, search)
+      getAllFiltered()
+    } else {
+      filterSearh(props.taskFiltered, search)
     }
+  }
+
+  const taskFilteredByLabel = () => {
+    props.setTaskFiltered(
+      props.task.filter((item) => item.category === props.categoryActual)
+    )
   }
 
   return (
@@ -50,10 +63,15 @@ export default function TaskSection() {
       <div>
         <h1 className="title">All Tasks</h1>
         <hr className="title__hr--mobile" />
-        <input type="search" placeholder="Search" className="input-search" onChange={searchTask} />
+        <input
+          type="search"
+          placeholder="Search"
+          className="input-search"
+          onChange={searchTask}
+        />
       </div>
 
-      <TaskContainer prop={task} />
+      <TaskContainer prop={props.taskFiltered} />
 
       <Link to="/AddTask">
         <button type="button" className="btn-plus">

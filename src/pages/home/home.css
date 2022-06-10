@@ -12,12 +12,13 @@
   display: flex;
   justify-content: flex-start;
   width: 25%;
-  max-height: 350px ;
+  max-height: 350px;
+  align-items: center;
 }
 
-.border-home{
+.border-home {
   border-right: var(--border-grey);
-} 
+}
 
 .title__hr--mobile {
   display: none;
@@ -49,5 +50,3 @@
     border-color: var(--border-gray);
   }
 }
-
-

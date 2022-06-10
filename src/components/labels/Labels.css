@@ -10,8 +10,14 @@
   text-decoration: none;
   font-size: 22px;
   line-height: 26px;
+  background: 0;
+  border: none;
 }
 
 .label-link:hover {
   color: var(--li-active);
+}
+
+.label-link:focus {
+  color: red;
 }
